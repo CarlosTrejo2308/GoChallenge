@@ -224,12 +224,12 @@ func printDataTable(table string) {
 
 		// Print them
 		fmt.Printf("\nIssue #%d\n", number)
-		fmt.Printf("- URL#%s\n", url)
-		fmt.Printf("- Nombre#%s\n", title)
-		fmt.Printf("- Autor#%s\n", user)
-		fmt.Printf("- Tags#%s\n", tags)
-		fmt.Printf("- Milestone\n  - Nombre: #%s\n", mile_name)
-		fmt.Printf("  - Desc: #%s\n", mile_desc)
+		fmt.Printf("- URL: %s\n", url)
+		fmt.Printf("- Nombre: %s\n", title)
+		fmt.Printf("- Autor: %s\n", user)
+		fmt.Printf("- Tags: %s\n", tags)
+		fmt.Printf("- Milestone\n  - Nombre: %s\n", mile_name)
+		fmt.Printf("  - Desc: %s\n", mile_desc)
 	}
 
 }
