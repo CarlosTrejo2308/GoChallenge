@@ -1,26 +1,17 @@
 package main
 
-import (
-	"io/ioutil"
-	"log"
-	"net/http"
-)
+import "fmt"
+
+func connectHTML(url string) {
+	fmt.Println(url)
+}
+
+func getIssues(user, repo, label string) {
+	url := fmt.Sprintf("https://api.github.com/repos/%s/%s/issues?labels=%s&page=1&per_page=5", user, repo, label)
+	connectHTML(url)
+}
 
 func main() {
-	resp, err := http.Get("https://api.github.com/zen")
-
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	body, err := ioutil.ReadAll(resp.Body)
-
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	//Convert the body to type string
-	sb := string(body)
-	log.Printf(sb)
-
+	fmt.Println("Hola")
+	getIssues("golang", "go", "Go2")
 }
